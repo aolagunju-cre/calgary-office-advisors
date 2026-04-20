@@ -51,7 +51,9 @@ export default function InsightPost({ post }) {
     },
     datePublished: post.date || new Date().toISOString(),
     dateModified: post.date || new Date().toISOString(),
-    const faqSchema = {
+  };
+
+  const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
@@ -95,12 +97,11 @@ export default function InsightPost({ post }) {
           text: 'TI allowances in Calgary typically range from 20-80 CAD per square foot depending on lease term, building class, and landlord. The longer the term and the better your credit, the more negotiating leverage you have. TI allowances are often the most valuable concession in a Calgary office lease. A 50 CAD per square foot TI allowance on a 10,000 square foot space is 500,000 CAD you can use for your office build-out.'
         }
       }
-    ]
-  };
+    ],
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteUrl}/insights/${post.slug}`,
-    },
+    }
   };
 
   return (
