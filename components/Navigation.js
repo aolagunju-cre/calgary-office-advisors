@@ -116,6 +116,7 @@ const Navigation = () => {
     { href: '/coworking', label: 'Coworking' },
     { href: '/references', label: 'References' },
     { href: '/contact', label: 'Contact' },
+    { href: '/guides', label: 'Free Guides' },
   ];
 
   // Solid background so title and links are always readable (e.g. over dark homepage hero)
