@@ -24,9 +24,15 @@ export default function GuidesPage() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email) {
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error('Failed to subscribe');
       setSubmitted(true);
     }
   };
